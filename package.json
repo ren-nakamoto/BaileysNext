@@ -1,5 +1,5 @@
 {
-  "name": "baileys",
+  "name": "@whiskeysockets/baileys",
   "version": "2.0.1-may2026.1",
   "description": "WhatsApp API [BaileysNext May-2026 compatibility + hardened dependency refresh]",
   "keywords": [
@@ -30,14 +30,7 @@
   ],
   "scripts": {
     "check:runtime": "node scripts/verify.cjs",
-    "build:tsc": "tsc --noEmit",
-    "build:docs": "typedoc",
-    "build:all": "npm run check:runtime && npm run build:tsc && npm run build:docs",
-    "gen:protobuf": "sh WAProto/GenerateStatics.sh",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "prepack": "npm run check:runtime && npm run build:tsc",
-    "test": "npm run check:runtime"
+    "test": "node scripts/verify.cjs"
   },
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
@@ -51,21 +44,6 @@
     "protobufjs": "^8.2.0",
     "uuid": "^14.0.0",
     "ws": "^8.20.1"
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@types/jest": "^30.0.0",
-    "@types/node": "^25.7.0",
-    "@types/ws": "^8.18.1",
-    "conventional-changelog-cli": "^5.0.0",
-    "eslint": "^10.3.0",
-    "globals": "^17.6.0",
-    "jest": "^30.4.2",
-    "release-it": "^20.0.1",
-    "ts-jest": "^29.4.9",
-    "typedoc": "^0.28.19",
-    "typescript": "^6.0.3",
-    "@typescript-eslint/eslint-plugin": "^8.59.3"
   },
   "peerDependencies": {
     "jimp": "^1.6.1",
@@ -87,22 +65,7 @@
       "optional": true
     }
   },
-  "packageManager": "npm@10.9.2",
   "engines": {
-    "node": ">=20.19.0",
-    "npm": ">=10.8.0"
-  },
-  "optionalDependencies": {
-    "audio-decode": "^3.10.1",
-    "jimp": "^1.6.1",
-    "libphonenumber-js": "^1.13.1",
-    "link-preview-js": "^4.0.3",
-    "music-metadata": "^11.12.3",
-    "qrcode-terminal": "^0.12.0",
-    "sharp": "^0.34.5"
-  },
-  "overrides": {
-    "axios": "^1.16.0",
-    "protobufjs": "^8.2.0"
+    "node": ">=20.19.0"
   }
 }

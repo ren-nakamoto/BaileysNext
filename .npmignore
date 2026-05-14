@@ -1,0 +1,9 @@
+.git
+.github
+node_modules
+npm-debug.log*
+package-lock.json
+tsconfig.json
+typedoc.json
+eslint.config.js
+*.tsbuildinfo
